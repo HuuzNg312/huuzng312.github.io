@@ -1,6 +1,6 @@
 ---
 title: Building an Autonomous Line Following & Obstacle Avoiding Robot
-date: 2025-11-28 20:00:00 +0700
+date: 2025-11-28 20:00:00
 layout: post
 categories: [Embedded Systems]
 tags: [Robotics, Arduino, Line Following, Ultrasonic, Control System]
