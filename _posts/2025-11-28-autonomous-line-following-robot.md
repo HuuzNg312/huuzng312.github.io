@@ -1,3 +1,12 @@
+---
+title: Building an Autonomous Line Following & Obstacle Avoiding Robot
+date: 2025-11-28 20:00:00 +0700
+layout: post
+categories: [Embedded Systems]
+tags: [Robotics, Arduino, Line Following, Ultrasonic, Control System]
+toc: true
+---
+
 # 🤖 Autonomous Line Following & Obstacle Avoiding Robot
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
