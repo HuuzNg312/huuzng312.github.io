@@ -9,10 +9,6 @@ toc: true
 
 # 🤖 Autonomous Line Following & Obstacle Avoiding Robot
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![Language](https://img.shields.io/badge/Language-C%2B%2B%20%2F%20Arduino-blue?style=for-the-badge)
-![Hardware](https://img.shields.io/badge/Hardware-Arduino%20Uno%20%2B%20L293D-orange?style=for-the-badge)
-
 ---
 
 ## 📖 Introduction — The First Time My Code Moved
