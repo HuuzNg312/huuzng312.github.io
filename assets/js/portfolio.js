@@ -1,4 +1,17 @@
 (() => {
+  // Retire the service worker used by the previous Jekyll theme so returning
+  // visitors are not served its cached home page after this static redesign.
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .getRegistrations()
+        .then((registrations) =>
+          Promise.all(registrations.map((registration) => registration.unregister())),
+        )
+        .catch(() => {});
+    });
+  }
+
   const root = document.documentElement;
   const header = document.querySelector("[data-header]");
   const themeToggle = document.querySelector("[data-theme-toggle]");
