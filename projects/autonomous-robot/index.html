@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#07111f">
+    <meta name="description" content="Project story and system design for an autonomous line-following and obstacle-avoiding Arduino robot.">
+    <title>Autonomous Robot · Huu Nguyen Phu</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307111f'/><path d='M17 18v28M47 18v28M17 32h30' stroke='%2362d9ff' stroke-width='6' stroke-linecap='round'/></svg>">
+    <link rel="stylesheet" href="../../assets/css/portfolio.css">
+    <script defer src="../../assets/js/portfolio.js"></script>
+  </head>
+  <body class="project-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header detail-header" data-header>
+      <a class="brand" href="../../" aria-label="Back to portfolio home">
+        <span class="brand-mark" aria-hidden="true">HNP</span>
+        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>PROJECT / 02</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Project navigation">
+        <a href="../../#projects">All projects</a>
+        <a href="#overview">Overview</a>
+        <a href="#hardware">Hardware</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
+        <a class="button button-small" href="https://github.com/HuuzNg312/Autonomous-Line-Following-Obstacle-Avoiding-Robot" target="_blank" rel="noreferrer">Repository ↗</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="detail-hero section-shell">
+        <a class="detail-back" href="../../#projects">← Back to all projects</a>
+        <div class="detail-hero-grid">
+          <div class="reveal">
+            <p class="detail-kicker">PROJECT 02 · ROBOTICS · EMBEDDED CONTROL</p>
+            <h1>Autonomous <span>Line Following & Obstacle Avoiding</span> Robot</h1>
+            <p class="detail-summary">The first project where my code moved something in the real world: a two-wheel Arduino robot that follows a track, detects obstacles, scans both directions, and chooses a safer path.</p>
+          </div>
+          <dl class="detail-meta reveal">
+            <div><dt>PLATFORM</dt><dd>Arduino Uno R3</dd></div>
+            <div><dt>SENSORS</dt><dd>TCRT5000 · HC-SR04</dd></div>
+            <div><dt>CONTROL</dt><dd>Correction logic · FSM</dd></div>
+            <div><dt>CONTEXT</dt><dd>First-year HCMUTE project</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="detail-media reveal" aria-label="Autonomous robot illustration">
+        <div class="detail-video-frame">
+          <img src="../../assets/portfolio/robot-card.svg" alt="Illustration showing the autonomous robot following a track and sensing an obstacle">
+          <div class="detail-media-caption"><span>SENSE · DECIDE · MOVE</span><span>LINE TRACKING + OBSTACLE AVOIDANCE</span></div>
+        </div>
+      </section>
+
+      <section class="detail-paper" id="overview">
+        <div class="section-shell">
+          <div class="detail-section reveal">
+            <div class="section-label">01 / PROJECT STORY</div>
+            <div class="detail-content">
+              <h2>The moment code became motion.</h2>
+              <p>This robot was an introduction to the complete embedded loop: sense the environment, interpret the readings, decide what to do, and drive physical actuators. The limited 8-bit platform made simple, dependable control more valuable than unnecessary algorithmic complexity.</p>
+              <div class="robot-gallery">
+                <img src="https://github.com/user-attachments/assets/b19ad3b1-68bb-4d9a-ab6a-2e98bd905440" alt="Autonomous robot project view one" loading="lazy">
+                <img src="https://github.com/user-attachments/assets/f416d7b6-39aa-43cf-a866-815bf3777b4b" alt="Autonomous robot project view two" loading="lazy">
+                <img src="https://github.com/user-attachments/assets/a593ed22-a1fd-4fed-b917-654105f57e17" alt="Autonomous robot project view three" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal">
+            <div class="section-label">02 / BEHAVIOR</div>
+            <div class="detail-content">
+              <h2>Two behaviors, one control loop.</h2>
+              <p>Normal operation uses three infrared sensors to correct the robot’s position over a black line. When the ultrasonic sensor detects an obstacle inside the safety threshold, the robot pauses line following and enters an avoidance sequence.</p>
+              <div class="flow-grid">
+                <div class="flow-card"><span>SENSE</span><strong>Read the path</strong><small>Left, center, and right TCRT5000 channels</small></div>
+                <div class="flow-card"><span>TRACK</span><strong>Correct motion</strong><small>Adjust wheel speed toward the line</small></div>
+                <div class="flow-card"><span>DETECT</span><strong>Find obstacle</strong><small>Measure distance with HC-SR04</small></div>
+                <div class="flow-card"><span>AVOID</span><strong>Choose direction</strong><small>Servo scan and finite-state turn sequence</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal" id="hardware">
+            <div class="section-label">03 / HARDWARE</div>
+            <div class="detail-content">
+              <h2>A compact mobile system.</h2>
+              <p>The Arduino Uno coordinates sensing and movement through an L293D motor shield. A separate buck regulator helps maintain a stable 5 V rail when motor current and electrical noise would otherwise disturb sensor readings.</p>
+              <div class="component-grid">
+                <div class="component-card"><span>MCU</span><strong>Arduino Uno R3</strong><small>Main control and sensor acquisition</small></div>
+                <div class="component-card"><span>LINE</span><strong>3× TCRT5000</strong><small>Left, center, and right track sensing</small></div>
+                <div class="component-card"><span>RANGE</span><strong>HC-SR04 + SG90</strong><small>Distance measurement and directional scan</small></div>
+                <div class="component-card"><span>DRIVE</span><strong>L293D + 2 DC motors</strong><small>Differential movement and steering</small></div>
+                <div class="component-card"><span>POWER</span><strong>2× 18650 + LM2596</strong><small>Battery source with regulated 5 V output</small></div>
+                <div class="component-card"><span>CHASSIS</span><strong>2WD acrylic platform</strong><small>Compact mechanical base</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal">
+            <div class="section-label">04 / LESSONS</div>
+            <div class="detail-content">
+              <h2>Hardware made the edge cases visible.</h2>
+              <p>The most useful lessons came from behavior that looked fine in code but failed on a physical track. Sensor calibration, motor noise, power stability, and the timing interaction between servo movement and wheel control all changed the result.</p>
+              <ul class="detail-list">
+                <li>Calibrate reflectance thresholds for different lighting and surfaces.</li>
+                <li>Separate movement states to keep obstacle handling predictable.</li>
+                <li>Regulate the supply to reduce motor-induced sensor instability.</li>
+                <li>Balance responsiveness against the resources of a small microcontroller.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-cta">
+        <div class="section-shell detail-cta-inner reveal">
+          <div><p class="eyebrow">SOURCE & NOTES</p><h2>See the code and original documentation.</h2></div>
+          <div class="hero-actions"><a class="button" href="https://github.com/HuuzNg312/Autonomous-Line-Following-Obstacle-Avoiding-Robot" target="_blank" rel="noreferrer">Open repository ↗</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span data-year></span> Huu Nguyen Phu</span><a href="../../#projects">All projects ↑</a></footer>
+  </body>
+</html>

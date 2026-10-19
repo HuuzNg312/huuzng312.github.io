@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#07111f">
-    <meta name="description" content="Huu Nguyen Phu — Electronics and Telecommunications undergraduate focused on Design Verification and RTL Design.">
-    <meta property="og:title" content="Huu Nguyen Phu · Design Verification & RTL Design">
-    <meta property="og:description" content="A project portfolio centered on verification evidence, RTL implementation, and honest engineering results.">
+    <meta name="description" content="Portfolio of Huu Nguyen Phu, an Electronics and Telecommunications undergraduate focused on Design Verification and RTL Design.">
+    <meta property="og:title" content="Huu Nguyen Phu · Engineering Portfolio">
+    <meta property="og:description" content="Selected digital design, verification, FPGA, and embedded projects.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://huuzng312.github.io/">
-    <title>Huu Nguyen Phu · Design Verification & RTL Design</title>
+    <meta property="og:image" content="https://huuzng312.github.io/assets/portfolio/hardware-demo.jpg">
+    <title>Huu Nguyen Phu · Engineering Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307111f'/><path d='M17 18v28M47 18v28M17 32h30' stroke='%2362d9ff' stroke-width='6' stroke-linecap='round'/></svg>">
     <link rel="stylesheet" href="assets/css/portfolio.css">
     <script defer src="assets/js/portfolio.js"></script>
@@ -21,176 +22,148 @@
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Back to top">
         <span class="brand-mark" aria-hidden="true">HNP</span>
-        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>DESIGN VERIFICATION · RTL DESIGN</small></span>
+        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>ENGINEERING PORTFOLIO</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme">
-          <span class="theme-icon" aria-hidden="true">◐</span>
-        </button>
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
         <a class="button button-small" href="mailto:huuz.sync312@gmail.com">Email</a>
       </div>
     </header>
 
     <main id="main">
-      <section class="hero section-shell" id="top">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="status-dot"></span> Open to Design Verification internships</div>
-          <p class="hero-kicker">DESIGN VERIFICATION · RTL DESIGN</p>
-          <h1>Verification-first <span>RTL engineering.</span></h1>
+      <section class="home-hero section-shell" id="top">
+        <div class="home-hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Electronics & Telecommunications · HCMUTE</p>
+          <h1>Hi, I’m Huu.<br><span>I build and verify digital systems.</span></h1>
           <p class="hero-lead">
-            I am an Electronics and Telecommunications undergraduate at HCMUTE,
-            focused primarily on Design Verification and secondarily on RTL Design.
-            I use projects to practice turning specifications into testable RTL and traceable evidence.
+            I am an undergraduate exploring how hardware moves from an idea to working silicon and FPGA systems.
+            My main direction is <strong>Design Verification</strong>, supported by <strong>RTL Design</strong>.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#projects">View projects</a>
-            <a class="button button-ghost" href="mailto:huuz.sync312@gmail.com">Email me</a>
+            <a class="button" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="https://github.com/HuuzNg312" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
-          <dl class="hero-facts" aria-label="Profile facts">
-            <div><dt>Primary role</dt><dd>Design Verification</dd></div>
-            <div><dt>Secondary role</dt><dd>RTL Design</dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:huuz.sync312@gmail.com">huuz.sync312@gmail.com</a></dd></div>
-          </dl>
+          <div class="role-pills" aria-label="Target roles">
+            <span><i>01</i> Design Verification</span>
+            <span><i>02</i> RTL Design</span>
+          </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Verification-oriented RTL workflow">
-          <div class="visual-topline">
-            <span>SPEC / DUT / CHECKS</span>
-            <span class="live-label"><i></i> EVIDENCE-LED</span>
-          </div>
-          <div class="system-map">
-            <div class="node node-host">
-              <span>SPEC</span>
-              <strong>Behavior & interfaces</strong>
-              <small>requirements · corner cases</small>
+        <div class="portrait-stage reveal" aria-label="Portrait and portfolio summary">
+          <div class="portrait-glow" aria-hidden="true"></div>
+          <div class="portrait-card">
+            <div class="portrait-topline"><span>PORTFOLIO / 2026</span><span class="live-label"><i></i> AVAILABLE</span></div>
+            <img src="assets/portfolio/avatar.png" alt="Illustrated portrait of Huu working at a computer">
+            <div class="portrait-caption">
+              <div><small>BASED IN</small><strong>Ho Chi Minh City, Vietnam</strong></div>
+              <div><small>INTERESTS</small><strong>Verification · Digital Design</strong></div>
             </div>
-            <div class="signal-line line-a"><span>intent</span></div>
-            <div class="node node-cpu">
-              <span>RTL</span>
-              <strong>Verilog DUT</strong>
-              <small>datapath · control · MMIO</small>
-            </div>
-            <div class="signal-line line-b"><span>stimulus</span></div>
-            <div class="node node-acc">
-              <span>DV</span>
-              <strong>Checks & regression</strong>
-              <small>golden data · assertions</small>
-              <div class="pe-grid" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
-            </div>
-            <div class="peripheral peripheral-sd"><span>Golden model</span><small>expected results</small></div>
-            <div class="peripheral peripheral-hdmi"><span>Waveforms</span><small>debug evidence</small></div>
           </div>
-          <div class="visual-metrics">
-            <div><strong>DV</strong><span>primary direction</span></div>
-            <div><strong>RTL</strong><span>design foundation</span></div>
-            <div><strong>Proof</strong><span>before claims</span></div>
-          </div>
+          <div class="floating-note floating-note-a"><span>DV</span><small>primary direction</small></div>
+          <div class="floating-note floating-note-b"><span>RTL</span><small>design foundation</small></div>
         </div>
       </section>
 
-      <section class="signal-strip" aria-label="Target engineering roles">
-        <div>DESIGN VERIFICATION <span>PRIMARY / 01</span></div>
-        <div>RTL DESIGN <span>SECONDARY / 02</span></div>
-      </section>
-
-      <section class="section-shell section" id="about">
-        <div class="section-heading reveal">
-          <p class="eyebrow">01 / FOCUS</p>
-          <h2>Two roles, one clear direction.</h2>
-          <p>
-            My portfolio is centered on Design Verification. RTL Design is the supporting
-            discipline that helps me understand the DUT, identify failure modes, and build
-            better tests. FPGA and embedded tools appear as project platforms, not target roles.
-          </p>
-        </div>
-        <div class="capability-grid">
-          <article class="capability-card capability-card-primary reveal">
-            <span class="card-index">PRIMARY</span>
-            <h3>Design Verification</h3>
-            <p>Directed testbenches, software golden-model comparison, layer-level checks, firmware/RTL co-simulation, waveform debug, and end-to-end regression.</p>
-            <div class="tag-row"><span>Testbench</span><span>Golden model</span><span>Regression</span><span>Debug</span></div>
-          </article>
-          <article class="capability-card reveal">
-            <span class="card-index">SECONDARY</span>
-            <h3>RTL Design</h3>
-            <p>Verilog modules, RV32I datapath and control, memory-mapped peripherals, fixed-point arithmetic, buffering, and FSM-based control.</p>
-            <div class="tag-row"><span>Verilog</span><span>RV32I</span><span>MMIO</span><span>FSM</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section project-section" id="projects">
+      <section class="project-index" id="projects">
         <div class="section-shell">
-          <div class="section-heading section-heading-light reveal">
-            <p class="eyebrow">02 / PROJECTS</p>
-            <h2>One complete entry for every project.</h2>
+          <div class="section-intro reveal">
+            <div>
+              <p class="eyebrow">01 / SELECTED WORK</p>
+              <h2>Projects are the portfolio.</h2>
+            </div>
             <p>
-              Each item keeps its context, implementation, verification evidence, demo,
-              and source links together. New projects can be added to this list without
-              changing the purpose of the site.
+              Start with the overview below. Open any project to see its story, architecture,
+              implementation, visual evidence, demo, and source links in one dedicated page.
             </p>
           </div>
 
-          <article class="project-entry" id="project-01">
-            <div class="project-showcase">
-              <div class="project-media reveal">
-                <video class="project-video" controls preload="metadata" playsinline poster="assets/portfolio/hardware-demo.jpg">
-                  <source src="assets/portfolio/riscv-cnn-demo.mp4" type="video/mp4">
-                  Your browser does not support embedded MP4 video.
-                </video>
-                <div class="media-caption"><span>FULL PROJECT DEMO · 04:59</span><span>TANG NANO 20K · 2026</span></div>
+          <div class="project-grid">
+            <a class="project-card project-card-featured reveal" href="projects/riscv-cnn-accelerator/" aria-label="Open RISC-V Controlled INT8 CNN Accelerator project">
+              <div class="project-card-media">
+                <img src="assets/portfolio/hardware-demo.jpg" alt="FPGA hardware running the CNN accelerator demo">
+                <span class="project-card-count">01</span>
+                <span class="project-card-state">FULL CASE STUDY</span>
               </div>
-              <div class="project-summary reveal">
-                <div class="project-number">PROJECT / 01 · DV + RTL</div>
-                <h3>RISC-V Controlled INT8 CNN Accelerator on FPGA</h3>
-                <p>
-                  A three-member team project integrating an RV32I processor, a signed-INT8
-                  convolution accelerator, firmware, microSD storage, UART loading, and HDMI output.
-                </p>
-                <ul class="check-list">
-                  <li>Directed RTL tests and integer golden-data comparison</li>
-                  <li>Firmware-driven end-to-end inference regression</li>
-                  <li><strong>16</strong> parallel INT8 MAC lanes in the RTL accelerator</li>
-                  <li><strong>98/100</strong> included real samples classified by the exported integer pipeline</li>
-                </ul>
-                <div class="project-links">
-                  <a class="button button-light" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator" target="_blank" rel="noreferrer">Repository ↗</a>
-                  <a class="text-link" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator/blob/main/Final_Project.pdf" target="_blank" rel="noreferrer">Technical report</a>
+              <div class="project-card-body">
+                <div class="project-card-meta"><span>FPGA · RTL · VERIFICATION</span><span>2026</span></div>
+                <h3>RISC-V Controlled<br>INT8 CNN Accelerator</h3>
+                <p>A team-built FPGA system combining an RV32I processor, custom CNN acceleration, firmware, storage, and HDMI output.</p>
+                <div class="project-card-footer">
+                  <div class="tag-row"><span>Verilog</span><span>RISC-V</span><span>INT8 CNN</span><span>Golden model</span></div>
+                  <strong>View project <i aria-hidden="true">↗</i></strong>
                 </div>
-                <p class="project-attribution">Team result · no sole module ownership claimed without a member-level responsibility record.</p>
               </div>
-            </div>
-          </article>
+            </a>
 
-          <article class="project-entry project-entry-compact reveal" id="project-02">
-            <div class="compact-number">PROJECT / 02</div>
+            <a class="project-card reveal" href="projects/autonomous-robot/" aria-label="Open Autonomous Line Following and Obstacle Avoiding Robot project">
+              <div class="project-card-media project-card-robot">
+                <img src="assets/portfolio/robot-card.svg" alt="Illustration of a line-following robot and sensor path">
+                <span class="project-card-count">02</span>
+                <span class="project-card-state">PROJECT STORY</span>
+              </div>
+              <div class="project-card-body">
+                <div class="project-card-meta"><span>ROBOTICS · EMBEDDED</span><span>2025</span></div>
+                <h3>Autonomous Line Following & Obstacle Avoiding Robot</h3>
+                <p>A first-year autonomous robot that combines line sensing, ultrasonic scanning, motor control, and finite-state behavior.</p>
+                <div class="project-card-footer">
+                  <div class="tag-row"><span>Arduino</span><span>Sensors</span><span>FSM</span></div>
+                  <strong>View project <i aria-hidden="true">↗</i></strong>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-shelf-note reveal">
+            <span>PROJECT SHELF</span>
+            <p>This gallery is designed to grow: every future project gets one card here and one focused detail page.</p>
+            <strong>02 published projects</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section section" id="about">
+        <div class="section-shell about-layout">
+          <div class="section-intro reveal">
             <div>
-              <p class="eyebrow">EARLIER EMBEDDED PROJECT</p>
-              <h3>Autonomous Line Following & Obstacle Avoiding Robot</h3>
-              <p>Arduino-based mobile robot using reflectance sensors, ultrasonic ranging, and finite-state navigation.</p>
-              <div class="tag-row"><span>Arduino</span><span>Control logic</span><span>Sensors</span><span>Robotics</span></div>
+              <p class="eyebrow">02 / ABOUT</p>
+              <h2>Learning hardware by building complete systems.</h2>
             </div>
-            <a class="button button-light" href="https://github.com/HuuzNg312/Autonomous-Line-Following-Obstacle-Avoiding-Robot" target="_blank" rel="noreferrer">Repository ↗</a>
-          </article>
+          </div>
+          <div class="about-copy reveal">
+            <p class="about-lead">I’m Huu Nguyen Phu, an Electronics and Telecommunications undergraduate at HCMUTE (2024–2028).</p>
+            <p>
+              I enjoy the point where specifications, RTL, testbenches, firmware, and physical hardware meet.
+              My projects help me practice structured debugging and honest engineering documentation—not just reaching a demo.
+            </p>
+          </div>
+          <div class="focus-cards">
+            <article class="focus-card focus-card-primary reveal">
+              <span>PRIMARY DIRECTION</span>
+              <h3>Design Verification</h3>
+              <p>Understanding intent, finding failure modes, checking results, and turning debugging into repeatable evidence.</p>
+            </article>
+            <article class="focus-card reveal">
+              <span>SECONDARY DIRECTION</span>
+              <h3>RTL Design</h3>
+              <p>Building clear datapaths, control logic, interfaces, and modules that can be tested and reasoned about.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div class="section-shell contact-inner reveal">
           <p class="eyebrow">03 / CONTACT</p>
-          <h2>Design Verification first. RTL Design alongside it.</h2>
-          <p>I am interested in internship opportunities focused on Design Verification and RTL Design.</p>
+          <h2>Let’s talk about verification and RTL.</h2>
+          <p>For internship opportunities, project discussions, or engineering conversations, email me directly.</p>
           <div class="hero-actions">
-            <a class="button button-light" href="mailto:huuz.sync312@gmail.com">huuz.sync312@gmail.com</a>
-            <a class="button button-outline-light" href="https://github.com/HuuzNg312" target="_blank" rel="noreferrer">@HuuzNg312 ↗</a>
+            <a class="button" href="mailto:huuz.sync312@gmail.com">huuz.sync312@gmail.com</a>
+            <a class="button button-ghost" href="https://github.com/HuuzNg312" target="_blank" rel="noreferrer">@HuuzNg312 ↗</a>
           </div>
         </div>
       </section>

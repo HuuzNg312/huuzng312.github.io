@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomous robot following a path</title>
+  <desc id="desc">A stylized electronics illustration of a two-wheel robot using line and ultrasonic sensors.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#12324a"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#62d9ff"/>
+      <stop offset="1" stop-color="#168db4"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#62d9ff" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="930" cy="130" r="240" fill="#62d9ff" opacity=".08"/>
+  <path d="M-80 720C210 720 220 590 470 590S750 730 1290 360" fill="none" stroke="#05090d" stroke-width="82" stroke-linecap="round"/>
+  <path d="M-80 720C210 720 220 590 470 590S750 730 1290 360" fill="none" stroke="#62d9ff" stroke-opacity=".25" stroke-width="4" stroke-dasharray="18 24"/>
+  <g transform="translate(390 210)">
+    <ellipse cx="210" cy="410" rx="260" ry="60" fill="#000" opacity=".35"/>
+    <circle cx="55" cy="340" r="78" fill="#06101b" stroke="#91a9ba" stroke-width="10"/>
+    <circle cx="365" cy="340" r="78" fill="#06101b" stroke="#91a9ba" stroke-width="10"/>
+    <rect x="54" y="110" width="312" height="250" rx="52" fill="url(#body)" stroke="#b9efff" stroke-width="5" filter="url(#glow)"/>
+    <rect x="93" y="152" width="234" height="120" rx="24" fill="#081827" stroke="#62d9ff" stroke-opacity=".65" stroke-width="4"/>
+    <circle cx="162" cy="212" r="35" fill="#bdf4ff"/>
+    <circle cx="258" cy="212" r="35" fill="#bdf4ff"/>
+    <circle cx="162" cy="212" r="15" fill="#07111f"/>
+    <circle cx="258" cy="212" r="15" fill="#07111f"/>
+    <rect x="172" y="67" width="76" height="55" rx="10" fill="#ffc86b"/>
+    <path d="M210 67V8" stroke="#ffc86b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M150 318H270" stroke="#07111f" stroke-width="14" stroke-linecap="round" opacity=".8"/>
+    <circle cx="125" cy="384" r="12" fill="#72e3a2"/>
+    <circle cx="210" cy="404" r="12" fill="#72e3a2"/>
+    <circle cx="295" cy="384" r="12" fill="#72e3a2"/>
+  </g>
+  <g fill="none" stroke="#72e3a2" stroke-width="5" stroke-linecap="round" opacity=".85">
+    <path d="M830 220c55-55 145-55 200 0"/>
+    <path d="M865 255c36-35 94-35 130 0"/>
+    <path d="M902 290c15-15 40-15 55 0"/>
+  </g>
+  <g font-family="ui-monospace, monospace">
+    <text x="70" y="105" fill="#62d9ff" font-size="22" font-weight="700" letter-spacing="5">SENSE / DECIDE / MOVE</text>
+    <text x="70" y="146" fill="#9cb0c1" font-size="18">TCRT5000 · HC-SR04 · MOTOR CONTROL</text>
+  </g>
+</svg>

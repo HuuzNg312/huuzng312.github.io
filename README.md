@@ -1,22 +1,23 @@
 # Huu Nguyen Phu — Engineering Portfolio
 
-Source for [huuzng312.github.io](https://huuzng312.github.io), a project portfolio focused on Design Verification and RTL Design.
+Source for [huuzng312.github.io](https://huuzng312.github.io), a multi-project portfolio focused on Design Verification and RTL Design.
 
-## Design goals
+## Information architecture
 
-- Present engineering evidence before decoration.
-- Keep every project as one complete, self-contained portfolio entry.
-- Present verification evidence and RTL implementation details without inventing future goals.
-- Embed a web-optimized project demonstration video directly in the relevant entry.
-- Remain fast, accessible, responsive, and dependency-free.
+- The home page introduces Huu and presents an expandable gallery of project cards.
+- Every project opens as a dedicated visual case study rather than expanding inside the home page.
+- Detailed pages keep the story, architecture, media, evidence, and source links together.
+- The current project shelf contains the RISC-V INT8 CNN Accelerator and the Autonomous Robot.
 
 ## Structure
 
 ```text
-index.html                 # Single-page portfolio
-assets/css/portfolio.css   # Responsive visual system
-assets/js/portfolio.js     # Theme and reveal interactions
-assets/portfolio/          # Project media, including the optimized demo video
+index.html                                # General portfolio home and project gallery
+projects/riscv-cnn-accelerator/index.html # FPGA project detail page with video
+projects/autonomous-robot/index.html      # Robotics project detail page
+assets/css/portfolio.css                  # Shared responsive visual system
+assets/js/portfolio.js                    # Theme and reveal interactions
+assets/portfolio/                         # Project media
 ```
 
 The site is plain HTML, CSS, and JavaScript and is served directly by GitHub Pages.

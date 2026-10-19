@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#07111f">
+    <meta name="description" content="Project story, architecture, verification evidence, and demo for a RISC-V controlled INT8 CNN accelerator on FPGA.">
+    <title>RISC-V INT8 CNN Accelerator · Huu Nguyen Phu</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307111f'/><path d='M17 18v28M47 18v28M17 32h30' stroke='%2362d9ff' stroke-width='6' stroke-linecap='round'/></svg>">
+    <link rel="stylesheet" href="../../assets/css/portfolio.css">
+    <script defer src="../../assets/js/portfolio.js"></script>
+  </head>
+  <body class="project-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header detail-header" data-header>
+      <a class="brand" href="../../" aria-label="Back to portfolio home">
+        <span class="brand-mark" aria-hidden="true">HNP</span>
+        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>PROJECT / 01</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Project navigation">
+        <a href="../../#projects">All projects</a>
+        <a href="#overview">Overview</a>
+        <a href="#evidence">Evidence</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
+        <a class="button button-small" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator" target="_blank" rel="noreferrer">Repository ↗</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="detail-hero section-shell">
+        <a class="detail-back" href="../../#projects">← Back to all projects</a>
+        <div class="detail-hero-grid">
+          <div class="reveal">
+            <p class="detail-kicker">PROJECT 01 · FPGA · RTL · VERIFICATION</p>
+            <h1>RISC-V Controlled <span>INT8 CNN Accelerator</span></h1>
+            <p class="detail-summary">A three-member team project that connects a custom RV32I processor, a signed-INT8 convolution accelerator, bare-metal firmware, microSD storage, UART loading, and HDMI output on a Tang Nano 20K.</p>
+          </div>
+          <dl class="detail-meta reveal">
+            <div><dt>ROLE AREA</dt><dd>Design Verification · RTL Design</dd></div>
+            <div><dt>PLATFORM</dt><dd>Tang Nano 20K FPGA</dd></div>
+            <div><dt>LANGUAGES</dt><dd>Verilog · C · Python</dd></div>
+            <div><dt>CONTEXT</dt><dd>Three-person course team</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="detail-media reveal" aria-label="Full project demonstration">
+        <div class="detail-video-frame">
+          <video controls preload="metadata" playsinline poster="../../assets/portfolio/hardware-demo.jpg">
+            <source src="../../assets/portfolio/riscv-cnn-demo.mp4" type="video/mp4">
+            Your browser does not support embedded MP4 video.
+          </video>
+          <div class="detail-media-caption"><span>FULL PROJECT DEMO · 04:59</span><span>HARDWARE + FIRMWARE + INFERENCE OUTPUT</span></div>
+        </div>
+      </section>
+
+      <section class="detail-paper" id="overview">
+        <div class="section-shell">
+          <div class="detail-section reveal">
+            <div class="section-label">01 / OVERVIEW</div>
+            <div class="detail-content">
+              <h2>One FPGA system, from model data to a visible result.</h2>
+              <p>The project explores hardware/software co-design: convolution runs in a dedicated RTL accelerator while the processor and bare-metal firmware coordinate data movement, later CNN stages, and output. The goal is not only a working demo, but a traceable path from integer reference data to hardware behavior.</p>
+              <div class="metric-grid">
+                <div class="metric-card"><strong>16</strong><span>parallel INT8 MAC lanes per accelerator cycle</span></div>
+                <div class="metric-card"><strong>98/100</strong><span>included real samples classified by the exported integer pipeline</span></div>
+                <div class="metric-card"><strong>RV32I</strong><span>custom processor coordinating the full flow</span></div>
+                <div class="metric-card"><strong>INT32</strong><span>accumulation inside the convolution datapath</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal">
+            <div class="section-label">02 / SYSTEM FLOW</div>
+            <div class="detail-content">
+              <h2>A complete inference path.</h2>
+              <p>Each stage has a clear responsibility, allowing the processor, accelerator, memory path, and display output to be inspected independently before end-to-end integration.</p>
+              <div class="flow-grid">
+                <div class="flow-card"><span>INPUT</span><strong>microSD / UART</strong><small>Load firmware, weights, and sample data</small></div>
+                <div class="flow-card"><span>CONTROL</span><strong>RV32I CPU</strong><small>Sequence transfers and software layers</small></div>
+                <div class="flow-card"><span>COMPUTE</span><strong>INT8 accelerator</strong><small>Conv1 and Conv2 in RTL</small></div>
+                <div class="flow-card"><span>OUTPUT</span><strong>HDMI display</strong><small>Show the image and predicted digit</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal" id="evidence">
+            <div class="section-label">03 / VISUAL EVIDENCE</div>
+            <div class="detail-content">
+              <h2>Evidence from control to implementation.</h2>
+              <p>The screenshots below connect the operator interface, the physical board, the predicted result, and post-place-and-route utilization.</p>
+              <div class="evidence-grid">
+                <article class="evidence-card"><img src="../../assets/portfolio/control-center.jpg" alt="CNN accelerator host control interface"><div><strong>Control center</strong><span>UART workflow and runtime controls</span></div></article>
+                <article class="evidence-card"><img src="../../assets/portfolio/inference-result.jpg" alt="Handwritten digit inference result on display"><div><strong>Inference result</strong><span>Visible end-to-end classification output</span></div></article>
+                <article class="evidence-card"><img src="../../assets/portfolio/resource-usage.png" alt="FPGA resource utilization report"><div><strong>Implementation report</strong><span>Post-P&amp;R device resource evidence</span></div></article>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section reveal">
+            <div class="section-label">04 / VERIFICATION</div>
+            <div class="detail-content">
+              <h2>Check small pieces, then check the whole system.</h2>
+              <p>The verification approach combines module-level directed tests with integer reference data and firmware-driven integration. This helps distinguish arithmetic errors from interface, sequencing, or data-movement failures.</p>
+              <ul class="detail-list">
+                <li>Directed RTL tests for processor and accelerator behavior.</li>
+                <li>Integer golden-data comparison for CNN layer outputs.</li>
+                <li>SDHC simulation model for the raw-sector storage path.</li>
+                <li>Firmware/RTL co-simulation and end-to-end hardware regression.</li>
+              </ul>
+              <div class="integrity-note"><strong>Team attribution:</strong> the repository and report document a three-person implementation. Individual module ownership is not claimed where the source material does not provide an auditable responsibility breakdown.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-cta">
+        <div class="section-shell detail-cta-inner reveal">
+          <div><p class="eyebrow">SOURCE & DOCUMENTATION</p><h2>Continue into the implementation.</h2></div>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator" target="_blank" rel="noreferrer">Open repository ↗</a>
+            <a class="button button-ghost" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator/blob/main/Final_Project.pdf" target="_blank" rel="noreferrer">Technical report ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span data-year></span> Huu Nguyen Phu</span><a href="../../#projects">All projects ↑</a></footer>
+  </body>
+</html>
