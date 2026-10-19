@@ -8,8 +8,8 @@
     <meta name="description" content="Project story, architecture, verification evidence, and demo for a RISC-V controlled INT8 CNN accelerator on FPGA.">
     <title>RISC-V INT8 CNN Accelerator · Huu Nguyen Phu</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307111f'/><path d='M17 18v28M47 18v28M17 32h30' stroke='%2362d9ff' stroke-width='6' stroke-linecap='round'/></svg>">
-    <link rel="stylesheet" href="../../assets/css/portfolio.css?v=20261019-gallery">
-    <script defer src="../../assets/js/portfolio.js?v=20261019-gallery"></script>
+    <link rel="stylesheet" href="../../assets/css/portfolio.css?v=20261019-interactions">
+    <script defer src="../../assets/js/portfolio.js?v=20261019-interactions"></script>
   </head>
   <body class="project-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -93,9 +93,15 @@
               <h2>Evidence from control to implementation.</h2>
               <p>The screenshots below connect the operator interface, the physical board, the predicted result, and post-place-and-route utilization.</p>
               <div class="evidence-grid">
-                <article class="evidence-card"><img src="../../assets/portfolio/control-center.jpg" alt="CNN accelerator host control interface"><div><strong>Control center</strong><span>UART workflow and runtime controls</span></div></article>
-                <article class="evidence-card"><img src="../../assets/portfolio/inference-result.jpg" alt="Handwritten digit inference result on display"><div><strong>Inference result</strong><span>Visible end-to-end classification output</span></div></article>
-                <article class="evidence-card"><img src="../../assets/portfolio/resource-usage.png" alt="FPGA resource utilization report"><div><strong>Implementation report</strong><span>Post-P&amp;R device resource evidence</span></div></article>
+                <button class="evidence-card" type="button" data-lightbox="../../assets/portfolio/control-center.jpg" data-caption="Control center — UART workflow and runtime controls" aria-label="Enlarge control center image">
+                  <span class="zoom-hint" aria-hidden="true">＋</span><img src="../../assets/portfolio/control-center.jpg" alt="CNN accelerator host control interface"><div><strong>Control center</strong><span>UART workflow and runtime controls</span></div>
+                </button>
+                <button class="evidence-card" type="button" data-lightbox="../../assets/portfolio/inference-result.jpg" data-caption="Inference result — visible end-to-end classification output" aria-label="Enlarge inference result image">
+                  <span class="zoom-hint" aria-hidden="true">＋</span><img src="../../assets/portfolio/inference-result.jpg" alt="Handwritten digit inference result on display"><div><strong>Inference result</strong><span>Visible end-to-end classification output</span></div>
+                </button>
+                <button class="evidence-card" type="button" data-lightbox="../../assets/portfolio/resource-usage.png" data-caption="Implementation report — post-place-and-route device resource evidence" aria-label="Enlarge implementation report image">
+                  <span class="zoom-hint" aria-hidden="true">＋</span><img src="../../assets/portfolio/resource-usage.png" alt="FPGA resource utilization report"><div><strong>Implementation report</strong><span>Post-P&amp;R device resource evidence</span></div>
+                </button>
               </div>
             </div>
           </div>
@@ -129,5 +135,11 @@
     </main>
 
     <footer class="site-footer"><span>© <span data-year></span> Huu Nguyen Phu</span><a href="../../#projects">All projects ↑</a></footer>
+
+    <dialog class="lightbox" data-dialog aria-label="Enlarged project evidence">
+      <button class="lightbox-close" type="button" data-dialog-close aria-label="Close enlarged image">×</button>
+      <img data-dialog-image src="../../assets/portfolio/control-center.jpg" alt="Enlarged project evidence">
+      <p data-dialog-caption></p>
+    </dialog>
   </body>
 </html>
