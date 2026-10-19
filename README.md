@@ -7,7 +7,7 @@ Source for [huuzng312.github.io](https://huuzng312.github.io), a multi-project p
 - The home page introduces Huu and presents an expandable gallery of project cards.
 - Every project opens as a dedicated visual case study rather than expanding inside the home page.
 - Detailed pages keep the story, architecture, media, evidence, and source links together.
-- The current project shelf contains the RISC-V INT8 CNN Accelerator and the Autonomous Robot.
+- The current project shelf contains Design and Verification of a RISC V-Based CNN AI Accelerator and Linux-Based Embedded System, plus the Autonomous Robot.
 
 ## Structure
 
