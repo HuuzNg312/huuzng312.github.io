@@ -389,6 +389,12 @@ h1 span {
   line-height: 1.4;
 }
 
+.hero-facts a {
+  color: inherit;
+  text-decoration-color: var(--cyan-strong);
+  text-underline-offset: 4px;
+}
+
 .hero-visual {
   position: relative;
   min-height: 590px;
@@ -623,7 +629,7 @@ h1 span {
 
 .signal-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   color: #07111f;
   background: var(--cyan);
 }
@@ -703,6 +709,11 @@ h1 span {
   box-shadow: 0 0 0 28px rgba(98, 217, 255, 0.018), 0 0 0 56px rgba(98, 217, 255, 0.012);
 }
 
+.capability-card-primary {
+  border-color: color-mix(in srgb, var(--cyan-strong) 58%, var(--line));
+  box-shadow: 0 20px 55px rgba(0, 184, 240, 0.12);
+}
+
 .card-index {
   color: var(--cyan-strong);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -772,10 +783,21 @@ h1 span {
   background: linear-gradient(180deg, transparent 58%, rgba(2, 8, 14, 0.82));
 }
 
-.project-media img {
+.project-media img,
+.project-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-video {
+  display: block;
+  min-height: 540px;
+  background: #02070c;
+}
+
+.project-entry + .project-entry {
+  margin-top: 28px;
 }
 
 .media-caption {
@@ -860,6 +882,55 @@ h1 span {
 
 .project-summary .text-link {
   color: var(--cyan);
+}
+
+.project-attribution {
+  margin: 30px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(185, 207, 221, 0.16);
+  color: #8399aa !important;
+  font-size: 0.78rem;
+}
+
+.project-entry-compact {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 34px;
+  padding: 34px;
+  color: #f5f8fb;
+  background: #07111f;
+  border: 1px solid rgba(98, 217, 255, 0.14);
+  border-radius: 22px;
+  box-shadow: 0 22px 58px rgba(7, 17, 31, 0.16);
+}
+
+.project-entry-compact .eyebrow {
+  margin-bottom: 10px;
+}
+
+.project-entry-compact h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+}
+
+.project-entry-compact p:not(.eyebrow) {
+  max-width: 720px;
+  color: #9fb2c3;
+}
+
+.project-entry-compact .tag-row span {
+  color: #9fdcf0;
+  background: rgba(98, 217, 255, 0.08);
+  border-color: rgba(98, 217, 255, 0.18);
+}
+
+.compact-number {
+  color: var(--cyan);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
 }
 
 .architecture-flow {
@@ -1298,6 +1369,21 @@ h1 span {
 
   .project-media {
     min-height: 330px;
+  }
+
+  .project-video {
+    min-height: 330px;
+  }
+
+  .project-entry-compact {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 20px;
+    padding: 28px;
+  }
+
+  .project-entry-compact .button {
+    width: fit-content;
   }
 
   .architecture-flow {

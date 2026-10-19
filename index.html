@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#07111f">
-    <meta name="description" content="Huu Nguyen Phu — electronics and telecommunications undergraduate focused on RTL design, design verification, FPGA development, and embedded systems.">
-    <meta property="og:title" content="Huu Nguyen Phu · RTL, DV & FPGA Portfolio">
-    <meta property="og:description" content="Engineering portfolio: architecture, RTL, verification evidence, FPGA implementation, and embedded integration.">
+    <meta name="description" content="Huu Nguyen Phu — Electronics and Telecommunications undergraduate focused on Design Verification and RTL Design.">
+    <meta property="og:title" content="Huu Nguyen Phu · Design Verification & RTL Design">
+    <meta property="og:description" content="A project portfolio centered on verification evidence, RTL implementation, and honest engineering results.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://huuzng312.github.io/">
-    <title>Huu Nguyen Phu · RTL, DV & FPGA</title>
+    <title>Huu Nguyen Phu · Design Verification & RTL Design</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307111f'/><path d='M17 18v28M47 18v28M17 32h30' stroke='%2362d9ff' stroke-width='6' stroke-linecap='round'/></svg>">
     <link rel="stylesheet" href="assets/css/portfolio.css">
     <script defer src="assets/js/portfolio.js"></script>
@@ -21,258 +21,173 @@
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Back to top">
         <span class="brand-mark" aria-hidden="true">HNP</span>
-        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>RTL · DV · FPGA</small></span>
+        <span class="brand-copy"><strong>Huu Nguyen Phu</strong><small>DESIGN VERIFICATION · RTL DESIGN</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#featured-project">Featured project</a>
-        <a href="#verification">Evidence</a>
-        <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
         <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme">
           <span class="theme-icon" aria-hidden="true">◐</span>
         </button>
-        <a class="button button-small" href="mailto:huuz.sync312@gmail.com">Contact</a>
+        <a class="button button-small" href="mailto:huuz.sync312@gmail.com">Email</a>
       </div>
     </header>
 
     <main id="main">
       <section class="hero section-shell" id="top">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="status-dot"></span> Open to engineering internships</div>
-          <p class="hero-kicker">DIGITAL HARDWARE · VERIFICATION · EMBEDDED SYSTEMS</p>
-          <h1>From architecture to <span>verified FPGA systems.</span></h1>
+          <div class="eyebrow"><span class="status-dot"></span> Open to Design Verification internships</div>
+          <p class="hero-kicker">DESIGN VERIFICATION · RTL DESIGN</p>
+          <h1>Verification-first <span>RTL engineering.</span></h1>
           <p class="hero-lead">
             I am an Electronics and Telecommunications undergraduate at HCMUTE,
-            building practical experience in RTL design, verification, FPGA implementation,
-            and hardware-software integration.
+            focused primarily on Design Verification and secondarily on RTL Design.
+            I use projects to practice turning specifications into testable RTL and traceable evidence.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#featured-project">Explore featured project</a>
-            <a class="button button-ghost" href="https://github.com/HuuzNg312" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+            <a class="button" href="#projects">View projects</a>
+            <a class="button button-ghost" href="mailto:huuz.sync312@gmail.com">Email me</a>
           </div>
           <dl class="hero-facts" aria-label="Profile facts">
-            <div><dt>Degree</dt><dd>Electronics & Telecommunications</dd></div>
-            <div><dt>Study period</dt><dd>2024–2028</dd></div>
-            <div><dt>Location</dt><dd>Ho Chi Minh City, Vietnam</dd></div>
+            <div><dt>Primary role</dt><dd>Design Verification</dd></div>
+            <div><dt>Secondary role</dt><dd>RTL Design</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:huuz.sync312@gmail.com">huuz.sync312@gmail.com</a></dd></div>
           </dl>
         </div>
 
-        <div class="hero-visual reveal" aria-label="FPGA system architecture overview">
+        <div class="hero-visual reveal" aria-label="Verification-oriented RTL workflow">
           <div class="visual-topline">
-            <span>SOC / SIGNAL MAP</span>
-            <span class="live-label"><i></i> VERIFIED FLOW</span>
+            <span>SPEC / DUT / CHECKS</span>
+            <span class="live-label"><i></i> EVIDENCE-LED</span>
           </div>
           <div class="system-map">
             <div class="node node-host">
-              <span>HOST</span>
-              <strong>Python control</strong>
-              <small>UART · CRC32</small>
+              <span>SPEC</span>
+              <strong>Behavior & interfaces</strong>
+              <small>requirements · corner cases</small>
             </div>
-            <div class="signal-line line-a"><span>115200</span></div>
+            <div class="signal-line line-a"><span>intent</span></div>
             <div class="node node-cpu">
-              <span>RV32I</span>
-              <strong>CPU + firmware</strong>
-              <small>MMIO · bare metal</small>
-            </div>
-            <div class="signal-line line-b"><span>32-bit bus</span></div>
-            <div class="node node-acc">
               <span>RTL</span>
-              <strong>4×4 PE array</strong>
-              <small>INT8 × INT8 → INT32</small>
+              <strong>Verilog DUT</strong>
+              <small>datapath · control · MMIO</small>
+            </div>
+            <div class="signal-line line-b"><span>stimulus</span></div>
+            <div class="node node-acc">
+              <span>DV</span>
+              <strong>Checks & regression</strong>
+              <small>golden data · assertions</small>
               <div class="pe-grid" aria-hidden="true">
                 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
                 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
             </div>
-            <div class="peripheral peripheral-sd"><span>microSD</span><small>model + samples</small></div>
-            <div class="peripheral peripheral-hdmi"><span>HDMI</span><small>result display</small></div>
+            <div class="peripheral peripheral-sd"><span>Golden model</span><small>expected results</small></div>
+            <div class="peripheral peripheral-hdmi"><span>Waveforms</span><small>debug evidence</small></div>
           </div>
           <div class="visual-metrics">
-            <div><strong>16</strong><span>MACs / cycle peak</span></div>
-            <div><strong>98/100</strong><span>real samples</span></div>
-            <div><strong>3</strong><span>verification layers</span></div>
+            <div><strong>DV</strong><span>primary direction</span></div>
+            <div><strong>RTL</strong><span>design foundation</span></div>
+            <div><strong>Proof</strong><span>before claims</span></div>
           </div>
         </div>
       </section>
 
-      <section class="signal-strip" aria-label="Core engineering focus">
-        <div>RTL DESIGN <span>01</span></div>
-        <div>DESIGN VERIFICATION <span>02</span></div>
-        <div>FPGA IMPLEMENTATION <span>03</span></div>
-        <div>EMBEDDED INTEGRATION <span>04</span></div>
+      <section class="signal-strip" aria-label="Target engineering roles">
+        <div>DESIGN VERIFICATION <span>PRIMARY / 01</span></div>
+        <div>RTL DESIGN <span>SECONDARY / 02</span></div>
       </section>
 
       <section class="section-shell section" id="about">
         <div class="section-heading reveal">
-          <p class="eyebrow">01 / ABOUT & CAPABILITIES</p>
-          <h2>Engineering across the hardware-software boundary.</h2>
+          <p class="eyebrow">01 / FOCUS</p>
+          <h2>Two roles, one clear direction.</h2>
           <p>
-            I enjoy projects where architecture, RTL, firmware, and verification must agree.
-            My goal is not only to make a design run, but to make its behavior explainable,
-            testable, and supported by evidence.
+            My portfolio is centered on Design Verification. RTL Design is the supporting
+            discipline that helps me understand the DUT, identify failure modes, and build
+            better tests. FPGA and embedded tools appear as project platforms, not target roles.
           </p>
         </div>
         <div class="capability-grid">
-          <article class="capability-card reveal">
-            <span class="card-index">A</span>
-            <h3>RTL & Digital Design</h3>
-            <p>Verilog, RV32I datapath and control, memory-mapped peripherals, fixed-point arithmetic, PE arrays, buffering, and FSM-based control.</p>
-            <div class="tag-row"><span>Verilog</span><span>RV32I</span><span>MMIO</span><span>INT8</span></div>
-          </article>
-          <article class="capability-card reveal">
-            <span class="card-index">B</span>
+          <article class="capability-card capability-card-primary reveal">
+            <span class="card-index">PRIMARY</span>
             <h3>Design Verification</h3>
-            <p>Directed testbenches, software golden-model comparison, layer-level checks, firmware/RTL co-simulation, and end-to-end regression.</p>
-            <div class="tag-row"><span>ModelSim</span><span>Golden data</span><span>Regression</span></div>
+            <p>Directed testbenches, software golden-model comparison, layer-level checks, firmware/RTL co-simulation, waveform debug, and end-to-end regression.</p>
+            <div class="tag-row"><span>Testbench</span><span>Golden model</span><span>Regression</span><span>Debug</span></div>
           </article>
           <article class="capability-card reveal">
-            <span class="card-index">C</span>
-            <h3>FPGA Development</h3>
-            <p>Gowin synthesis and place-and-route, resource analysis, timing review, constraint-driven implementation, and Tang Nano 20K bring-up.</p>
-            <div class="tag-row"><span>Gowin EDA</span><span>Tang Nano 20K</span><span>STA</span></div>
-          </article>
-          <article class="capability-card reveal">
-            <span class="card-index">D</span>
-            <h3>Embedded Integration</h3>
-            <p>Bare-metal C, Python tools, UART bootloading, SPI/microSD storage, HDMI output, and hardware-software debugging.</p>
-            <div class="tag-row"><span>C</span><span>Python</span><span>UART</span><span>SPI</span></div>
+            <span class="card-index">SECONDARY</span>
+            <h3>RTL Design</h3>
+            <p>Verilog modules, RV32I datapath and control, memory-mapped peripherals, fixed-point arithmetic, buffering, and FSM-based control.</p>
+            <div class="tag-row"><span>Verilog</span><span>RV32I</span><span>MMIO</span><span>FSM</span></div>
           </article>
         </div>
       </section>
 
-      <section class="section project-section" id="featured-project">
+      <section class="section project-section" id="projects">
         <div class="section-shell">
           <div class="section-heading section-heading-light reveal">
-            <p class="eyebrow">02 / FEATURED PROJECT</p>
-            <h2>RISC-V Controlled INT8 CNN Accelerator on FPGA</h2>
-            <p>A complete team-developed inference system, documented from architecture and RTL through firmware, verification, place-and-route, and board demonstration.</p>
+            <p class="eyebrow">02 / PROJECTS</p>
+            <h2>One complete entry for every project.</h2>
+            <p>
+              Each item keeps its context, implementation, verification evidence, demo,
+              and source links together. New projects can be added to this list without
+              changing the purpose of the site.
+            </p>
           </div>
 
-          <div class="project-showcase">
-            <div class="project-media reveal">
-              <img src="assets/portfolio/hardware-demo.jpg" alt="Tang Nano 20K board connected for the hardware demonstration" width="1280" height="720">
-              <div class="media-caption"><span>HARDWARE DEMO</span><span>TANG NANO 20K · 2026</span></div>
-            </div>
-            <div class="project-summary reveal">
-              <div class="project-number">PROJECT / 01</div>
-              <h3>RV32I + 4×4 PE array + microSD + HDMI</h3>
-              <p>
-                Conv1 and Conv2 run in a signed-INT8 RTL accelerator. Bare-metal RV32I
-                firmware performs pooling, requantization, FC1, FC2, and Argmax while
-                coordinating raw-sector microSD data and result publication.
-              </p>
-              <ul class="check-list">
-                <li><strong>1,016,064</strong> convolution MACs per inference</li>
-                <li><strong>16</strong> parallel INT8 multiply-accumulate lanes</li>
-                <li><strong>98/100</strong> included real handwritten samples classified by the exported integer pipeline</li>
-                <li>CRC32-protected UART loading for separate IMEM and DMEM</li>
-              </ul>
-              <div class="project-links">
-                <a class="button button-light" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator" target="_blank" rel="noreferrer">View repository ↗</a>
-                <a class="text-link" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator/blob/main/Final_Project.pdf" target="_blank" rel="noreferrer">Read technical report</a>
+          <article class="project-entry" id="project-01">
+            <div class="project-showcase">
+              <div class="project-media reveal">
+                <video class="project-video" controls preload="metadata" playsinline poster="assets/portfolio/hardware-demo.jpg">
+                  <source src="assets/portfolio/riscv-cnn-demo.mp4" type="video/mp4">
+                  Your browser does not support embedded MP4 video.
+                </video>
+                <div class="media-caption"><span>FULL PROJECT DEMO · 04:59</span><span>TANG NANO 20K · 2026</span></div>
+              </div>
+              <div class="project-summary reveal">
+                <div class="project-number">PROJECT / 01 · DV + RTL</div>
+                <h3>RISC-V Controlled INT8 CNN Accelerator on FPGA</h3>
+                <p>
+                  A three-member team project integrating an RV32I processor, a signed-INT8
+                  convolution accelerator, firmware, microSD storage, UART loading, and HDMI output.
+                </p>
+                <ul class="check-list">
+                  <li>Directed RTL tests and integer golden-data comparison</li>
+                  <li>Firmware-driven end-to-end inference regression</li>
+                  <li><strong>16</strong> parallel INT8 MAC lanes in the RTL accelerator</li>
+                  <li><strong>98/100</strong> included real samples classified by the exported integer pipeline</li>
+                </ul>
+                <div class="project-links">
+                  <a class="button button-light" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator" target="_blank" rel="noreferrer">Repository ↗</a>
+                  <a class="text-link" href="https://github.com/HuuzNg312/riscv-int8-cnn-accelerator/blob/main/Final_Project.pdf" target="_blank" rel="noreferrer">Technical report</a>
+                </div>
+                <p class="project-attribution">Team result · no sole module ownership claimed without a member-level responsibility record.</p>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="architecture-flow reveal" aria-label="Implemented inference flow">
-            <div><span>01</span><strong>Load</strong><small>UART boot + microSD</small></div>
-            <b aria-hidden="true">→</b>
-            <div><span>02</span><strong>Accelerate</strong><small>Conv1 / Conv2 in RTL</small></div>
-            <b aria-hidden="true">→</b>
-            <div><span>03</span><strong>Complete</strong><small>Pool / FC / Argmax in C</small></div>
-            <b aria-hidden="true">→</b>
-            <div><span>04</span><strong>Present</strong><small>Result MMIO + HDMI</small></div>
-          </div>
-
-          <aside class="integrity-note reveal">
-            <strong>Attribution note</strong>
-            <p>
-              The course report names three implementation-group members. Because it does
-              not provide an auditable module-by-module responsibility table, this portfolio
-              describes the integrated team result and does not claim sole ownership of
-              individual modules.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section-shell section" id="verification">
-        <div class="section-heading reveal">
-          <p class="eyebrow">03 / VERIFICATION & EVIDENCE</p>
-          <h2>Results are presented with their test level and limitations.</h2>
-          <p>Click any evidence card to inspect the full image.</p>
-        </div>
-        <div class="evidence-grid">
-          <button class="evidence-card reveal" type="button" data-lightbox="assets/portfolio/control-center.jpg" data-caption="Desktop control application communicating with the FPGA over UART.">
-            <img src="assets/portfolio/control-center.jpg" alt="" width="1280" height="720" loading="lazy">
-            <span>01 / HOST INTEGRATION</span>
-            <strong>UART control & firmware flow</strong>
-            <small>Desktop tool · board connection · status reporting</small>
-          </button>
-          <button class="evidence-card reveal" type="button" data-lightbox="assets/portfolio/inference-result.jpg" data-caption="Board demonstration result: an updated handwritten sample classified as digit 6 and shown over HDMI.">
-            <img src="assets/portfolio/inference-result.jpg" alt="" width="1280" height="720" loading="lazy">
-            <span>02 / BOARD DEMONSTRATION</span>
-            <strong>End-to-end digit inference</strong>
-            <small>microSD sample · CNN pipeline · HDMI result</small>
-          </button>
-          <button class="evidence-card reveal" type="button" data-lightbox="assets/portfolio/resource-usage.png" data-caption="Gowin post-place-and-route resource summary for the complete SoC.">
-            <img src="assets/portfolio/resource-usage.png" alt="" width="1200" height="667" loading="lazy">
-            <span>03 / IMPLEMENTATION</span>
-            <strong>Post-P&R resource evidence</strong>
-            <small>76% logic · 100% BSRAM · 92% DSP</small>
-          </button>
-        </div>
-
-        <div class="verification-table reveal">
-          <div class="table-row table-head"><span>Layer</span><span>Method</span><span>Evidence</span></div>
-          <div class="table-row"><span>RTL blocks</span><span>Directed simulation</span><span>MAC, buffering, SD-SPI MMIO, UART loader</span></div>
-          <div class="table-row"><span>CNN layers</span><span>Golden tensor comparison</span><span>Conv1 / Conv2 INT32 output checks</span></div>
-          <div class="table-row"><span>Integrated SoC</span><span>Firmware-driven regression</span><span>Prediction, sample ID, preview image</span></div>
-          <div class="table-row"><span>FPGA implementation</span><span>Gowin P&R analysis</span><span>Setup passes; 15 hold endpoints remain open</span></div>
-        </div>
-      </section>
-
-      <section class="section-shell section" id="journey">
-        <div class="section-heading reveal">
-          <p class="eyebrow">04 / DEVELOPMENT JOURNEY</p>
-          <h2>Building depth one system at a time.</h2>
-        </div>
-        <ol class="timeline">
-          <li class="reveal">
-            <time>2024</time>
-            <div><h3>Foundations</h3><p>Started Electronics and Telecommunications studies at HCMUTE; developed core programming and circuit fundamentals.</p></div>
-          </li>
-          <li class="reveal">
-            <time>2025</time>
-            <div><h3>Embedded control</h3><p>Built sensor, PWM, UART, robotics, and PCB-oriented projects using Arduino and ESP32 platforms.</p></div>
-          </li>
-          <li class="reveal">
-            <time>2026</time>
-            <div><h3>Digital hardware systems</h3><p>Integrated an RV32I SoC, INT8 accelerator, firmware, storage, host tooling, verification, and FPGA demonstration.</p></div>
-          </li>
-          <li class="reveal">
-            <time>NEXT</time>
-            <div><h3>Verification maturity</h3><p>Expand instruction and corner-case coverage, improve CDC discipline, and build more reusable verification environments.</p></div>
-          </li>
-        </ol>
-
-        <div class="secondary-project reveal">
-          <div>
-            <p class="eyebrow">EARLIER PROJECT</p>
-            <h3>Autonomous Line Following & Obstacle Avoiding Robot</h3>
-            <p>Arduino-based mobile robot using reflectance sensors, ultrasonic ranging, and finite-state navigation.</p>
-          </div>
-          <a class="text-link" href="https://github.com/HuuzNg312/Autonomous-Line-Following-Obstacle-Avoiding-Robot" target="_blank" rel="noreferrer">Open project ↗</a>
+          <article class="project-entry project-entry-compact reveal" id="project-02">
+            <div class="compact-number">PROJECT / 02</div>
+            <div>
+              <p class="eyebrow">EARLIER EMBEDDED PROJECT</p>
+              <h3>Autonomous Line Following & Obstacle Avoiding Robot</h3>
+              <p>Arduino-based mobile robot using reflectance sensors, ultrasonic ranging, and finite-state navigation.</p>
+              <div class="tag-row"><span>Arduino</span><span>Control logic</span><span>Sensors</span><span>Robotics</span></div>
+            </div>
+            <a class="button button-light" href="https://github.com/HuuzNg312/Autonomous-Line-Following-Obstacle-Avoiding-Robot" target="_blank" rel="noreferrer">Repository ↗</a>
+          </article>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div class="section-shell contact-inner reveal">
-          <p class="eyebrow">05 / CONTACT</p>
-          <h2>Let’s build dependable digital systems.</h2>
-          <p>I am interested in internship opportunities and technical collaboration across design verification, RTL, FPGA, and embedded systems.</p>
+          <p class="eyebrow">03 / CONTACT</p>
+          <h2>Design Verification first. RTL Design alongside it.</h2>
+          <p>I am interested in internship opportunities focused on Design Verification and RTL Design.</p>
           <div class="hero-actions">
             <a class="button button-light" href="mailto:huuz.sync312@gmail.com">huuz.sync312@gmail.com</a>
             <a class="button button-outline-light" href="https://github.com/HuuzNg312" target="_blank" rel="noreferrer">@HuuzNg312 ↗</a>
@@ -283,13 +198,7 @@
 
     <footer class="site-footer">
       <span>© <span data-year></span> Huu Nguyen Phu</span>
-      <span>Designed as an evidence-led engineering portfolio.</span>
+      <span>Design Verification · RTL Design</span>
     </footer>
-
-    <dialog class="lightbox" data-dialog>
-      <button type="button" class="lightbox-close" data-dialog-close aria-label="Close image">×</button>
-      <img src="assets/portfolio/hardware-demo.jpg" data-dialog-image alt="">
-      <p data-dialog-caption></p>
-    </dialog>
   </body>
 </html>

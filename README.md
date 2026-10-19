@@ -1,12 +1,13 @@
 # Huu Nguyen Phu — Engineering Portfolio
 
-Source for [huuzng312.github.io](https://huuzng312.github.io), a focused portfolio for RTL design, design verification, FPGA development, and embedded systems.
+Source for [huuzng312.github.io](https://huuzng312.github.io), a project portfolio focused on Design Verification and RTL Design.
 
 ## Design goals
 
 - Present engineering evidence before decoration.
-- Make the featured RISC-V/CNN project understandable in under two minutes.
-- Separate verified measurements from goals and future work.
+- Keep every project as one complete, self-contained portfolio entry.
+- Present verification evidence and RTL implementation details without inventing future goals.
+- Embed a web-optimized project demonstration video directly in the relevant entry.
 - Remain fast, accessible, responsive, and dependency-free.
 
 ## Structure
@@ -14,8 +15,8 @@ Source for [huuzng312.github.io](https://huuzng312.github.io), a focused portfol
 ```text
 index.html                 # Single-page portfolio
 assets/css/portfolio.css   # Responsive visual system
-assets/js/portfolio.js     # Theme, reveal, and evidence lightbox
-assets/portfolio/          # Local project evidence
+assets/js/portfolio.js     # Theme and reveal interactions
+assets/portfolio/          # Project media, including the optimized demo video
 ```
 
 The site is plain HTML, CSS, and JavaScript and is served directly by GitHub Pages.
